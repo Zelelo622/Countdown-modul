@@ -31,7 +31,9 @@ function updateTime(dateEntered) {
 function setResetInterval(running) {
     if (running) {
         const dateEntered = new Date(`${datePicker.value} 00:00:00`);
-        const textDate = `${dateEntered.getDate() < 10 ? '0' : ''}${dateEntered.getDate()}.${dateEntered.getMonth() < 10 ? '0' : ''}${dateEntered.getMonth() + 1}.${dateEntered.getFullYear()}`;
+        const textDate = `${dateEntered.getDate() < 10 ? '0' : ''}${dateEntered.getDate()
+        }.${dateEntered.getMonth() < 10 ? '0' : ''}${dateEntered.getMonth() + 1
+        }.${dateEntered.getFullYear()}`;
         expectedTime.innerText = textDate;
         interval = setInterval(updateTime, 1000, dateEntered);
     } else {
