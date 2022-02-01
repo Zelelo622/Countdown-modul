@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1 class="title">до Нового <small class="year"></small> года осталось:</h1>
-        <div class="countdown" id="countdown">
-            <div class="time">
-                <h2 class="days">00</h2>
-                <small>дней</small>
+      <a href="#popupModal" id="settings" class="settings">Настройки</a>
+      <div id="popupModal" class="open-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Настройка</h3>
+              <a href="#close" title="Close" class="close">×</a>
             </div>
-            <div class="time">
-                <h2 class="hourse">00</h2>
-                <small>часов</small>
+            <div class="modal-body">
+              <input type="date" id="datePicker">
+              <button
+                id="generate"
+                class="close"
+                onclick="location.href='#close'"
+              >
+                Отправить
+              </button>
             </div>
-            <div class="time">
-                <h2 class="minutes">00</h2>
-                <small>минут</small>
-            </div>
-            <div class="time">
-                <h2 class="seconds">00</h2>
-                <small>секунд</small>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <h1 class="title">
+        до <small class="expected-time-text"></small> осталось:
+      </h1>
+      <div class="countdown" id="countdown">
+        <div class="time">
+          <h2 class="days">00</h2>
+          <small>дней</small>
+        </div>
+        <div class="time">
+          <h2 class="hourse">00</h2>
+          <small>часов</small>
+        </div>
+        <div class="time">
+          <h2 class="minutes">00</h2>
+          <small>минут</small>
+        </div>
+        <div class="time">
+          <h2 class="seconds">00</h2>
+          <small>секунд</small>
+        </div>
+      </div>
     </div>
 
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
